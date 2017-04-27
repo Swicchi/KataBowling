@@ -18,6 +18,10 @@ public class Bowling {
 	}
 	public void roll(int i) {
 		if(i == 10 && cantRoll==0){
+			if (spare){
+				frameScore[sparePos]+=i;
+				spare=false;
+			}
 			frameScore[frame]=10;
 			strikePos = frame; 
 			strike = true;

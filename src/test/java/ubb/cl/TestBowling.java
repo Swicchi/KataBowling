@@ -94,6 +94,30 @@ public void FirstTenSecondFiveThirdFiveFourthOneShouldByThirtyTwo(){
 	int result = bowling.score();
 	assertEquals(32,result);
 }
+@Test
+public void FirstFiveSecondFiveThirdTenFourthOneShouldByThirtyTwo(){
+	bowling.roll(5);
+	bowling.roll(5);
+	bowling.roll(10);
+	bowling.roll(1);
+	bowling.roll(0);
+	bowling.roll(0);
+	bowling.roll(0);
+	bowling.roll(0);
+	bowling.roll(0);
+	bowling.roll(0);
+	bowling.roll(0);
+	bowling.roll(0);
+	bowling.roll(0);
+	bowling.roll(0);
+	bowling.roll(0);
+	bowling.roll(0);
+	bowling.roll(0);
+	bowling.roll(0);
+	bowling.roll(0);
+	int result = bowling.score();
+	assertEquals(32,result);
+}
 
 
 
