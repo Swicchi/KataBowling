@@ -7,7 +7,8 @@ public class Bowling {
 	boolean strike;
 	int strikePos;
 	int strikeTurn;
-
+	boolean spare;
+	int sparePos;
 	int [] frameScore= new int [10];
 	public Bowling (){
 		score = 0;
@@ -30,8 +31,16 @@ public class Bowling {
 				if(strikeTurn==2)
 					strike=false;
 			}
+			if (spare){
+				frameScore[sparePos]+=i;
+				spare=false;
+			}
 			cantRoll++;
 			if (cantRoll==2){
+				if(frameScore[frame]==10){
+					spare=true;
+					sparePos=frame;
+				}
 				frame++;
 				cantRoll=0;
 			}
