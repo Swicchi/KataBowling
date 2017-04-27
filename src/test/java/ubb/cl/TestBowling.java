@@ -47,7 +47,7 @@ public void FirstTenSecondOneThirdTwoShouldBySixteen(){
 	assertEquals(16,result);
 }
 @Test
-public void FirstFiveSecondFiveThirdTwoFourthOneShouldBySixteen(){
+public void FirstFiveSecondFiveThirdTwoFourthOneShouldByFiveteen(){
 	bowling.roll(5);
 	bowling.roll(5);
 	bowling.roll(2);
@@ -69,6 +69,30 @@ public void FirstFiveSecondFiveThirdTwoFourthOneShouldBySixteen(){
 	bowling.roll(0);
 	int result = bowling.score();
 	assertEquals(15,result);
+}
+@Test
+public void FirstTenSecondFiveThirdFiveFourthOneShouldByThirtyTwo(){
+	bowling.roll(10);
+	bowling.roll(5);
+	bowling.roll(5);
+	bowling.roll(1);
+	bowling.roll(0);
+	bowling.roll(0);
+	bowling.roll(0);
+	bowling.roll(0);
+	bowling.roll(0);
+	bowling.roll(0);
+	bowling.roll(0);
+	bowling.roll(0);
+	bowling.roll(0);
+	bowling.roll(0);
+	bowling.roll(0);
+	bowling.roll(0);
+	bowling.roll(0);
+	bowling.roll(0);
+	bowling.roll(0);
+	int result = bowling.score();
+	assertEquals(32,result);
 }
 
 
